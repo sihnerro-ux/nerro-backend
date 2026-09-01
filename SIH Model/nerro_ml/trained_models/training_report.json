@@ -1,0 +1,121 @@
+{
+  "risk_classifier": {
+    "best_model": "LogisticRegression",
+    "accuracy": 0.849,
+    "macro_f1": 0.8414,
+    "leaderboard": [
+      {
+        "rank": 1,
+        "model": "LogisticRegression",
+        "macro_f1": 0.8414,
+        "accuracy": 0.849,
+        "selected": true
+      },
+      {
+        "rank": 2,
+        "model": "SVM",
+        "macro_f1": 0.8328,
+        "accuracy": 0.841,
+        "selected": false
+      },
+      {
+        "rank": 3,
+        "model": "XGBoost",
+        "macro_f1": 0.8257,
+        "accuracy": 0.833,
+        "selected": false
+      },
+      {
+        "rank": 4,
+        "model": "RandomForest",
+        "macro_f1": 0.8236,
+        "accuracy": 0.833,
+        "selected": false
+      },
+      {
+        "rank": 5,
+        "model": "GradientBoosting",
+        "macro_f1": 0.8236,
+        "accuracy": 0.832,
+        "selected": false
+      }
+    ],
+    "confusion_matrix": [
+      [
+        534,
+        73
+      ],
+      [
+        78,
+        315
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n           0       0.87      0.88      0.88       607\n           1       0.81      0.80      0.81       393\n\n    accuracy                           0.85      1000\n   macro avg       0.84      0.84      0.84      1000\nweighted avg       0.85      0.85      0.85      1000\n",
+    "feature_importances": {
+      "rainfall_mm": 0.2235,
+      "slope_deg": 0.1693,
+      "elevation_m": 0.1459,
+      "past_incident_count": 0.1431,
+      "is_monsoon": 0.1318,
+      "weather_severity": 0.1058,
+      "road_condition": 0.0667,
+      "traffic_density": 0.014
+    }
+  },
+  "delay_regressor": {
+    "best_model": "XGBoost",
+    "rmse": 42.97,
+    "mae": 12.06,
+    "r2": 0.892,
+    "leaderboard": [
+      {
+        "rank": 1,
+        "model": "XGBoost",
+        "rmse": 42.97,
+        "mae": 12.06,
+        "r2": 0.892,
+        "selected": true
+      },
+      {
+        "rank": 2,
+        "model": "GradientBoosting",
+        "rmse": 45.7,
+        "mae": 12.34,
+        "r2": 0.8778,
+        "selected": false
+      },
+      {
+        "rank": 3,
+        "model": "RandomForest",
+        "rmse": 52.2,
+        "mae": 16.57,
+        "r2": 0.8406,
+        "selected": false
+      },
+      {
+        "rank": 4,
+        "model": "Ridge",
+        "rmse": 63.9,
+        "mae": 36.09,
+        "r2": 0.7612,
+        "selected": false
+      },
+      {
+        "rank": 5,
+        "model": "LinearRegression",
+        "rmse": 63.93,
+        "mae": 36.14,
+        "r2": 0.761,
+        "selected": false
+      }
+    ],
+    "feature_importances": {
+      "distance_km": 0.13600000739097595,
+      "traffic_density": 0.029999999329447746,
+      "rainfall_mm": 0.06769999861717224,
+      "road_condition": 0.2775000035762787,
+      "historical_avg_minutes": 0.46389999985694885,
+      "active_incidents": 0.024900000542402267
+    }
+  }
+}
